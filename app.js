@@ -67,61 +67,119 @@
 // };
 // foo.someMethod();
 
-const player = {
-    name: 'Josh the great',
-    health: 1000,
-    power: 1000,
-    stamina: 1000
+// const player = {
+//     name: 'Josh the great',
+//     health: 1000,
+//     power: 1000,
+//     stamina: 1000
+// }
+
+// const bigBadBoss = {
+//     name: 'Magnardo the Merciless',
+//     health: 1000000,
+//     power: 1000000,
+//     stamina: Infinity
+// }
+// // What about function
+// const createEnemy = (nameIs, healthIs, powerIs, staminaIs) => {
+//     const newEnemy = {
+//         name: nameIs,
+//         health: healthIs,
+//         power: powerIs,
+//         stamina: staminaIs
+//     }
+//     return newEnemy
+// }
+
+// const createPlayer = (nameIs, healthIs, powerIs, staminaIs) => {
+//     const newPlayer = {
+//         name: nameIs,
+//         health: healthIs,
+//         power: powerIs,
+//         stamina: staminaIs
+//     }
+//     return newPlayer
+// }
+
+
+// // creating a class
+
+// class Character {
+//     constructor (name, age, eyes, hair, lovesCats = false, lovesDogs) {
+//       this.legs = 2;
+//       this.arms = 2;
+//       this.name = name;
+//       this.age = age;
+//       this.eyes = eyes;
+//       this.hair = hair;
+//       this.lovesCats = lovesCats;
+//       this.lovesDogs = lovesDogs || false;
+//     }
+//     greet (otherCharacter) {
+//       console.log('hi ' + otherCharacter + '!');
+//     }
+//     smite () {
+//       console.log('I smite thee you vile person');
+//     }
+//   }
+//   const you = new Character('Cathy the Miraculous', 29, 'brown', 'locs of dark brown', true, true);
+//   const me = new Character('Arthur the Wavy', 32, 'brown', 'his waves be spinnin keep of the g for greatness');
+//   console.log(me);
+
+// factory functions
+
+class Car {
+    constructor(make, vin) {
+        this.make = make;
+        this.vin = vin;
+    }
+    // methods
+    drive() {
+        console.log('vroom vroom')
+    }
 }
 
-const bigBadBoss = {
-    name: 'Magnardo the Merciless',
-    health: 1000000,
-    power: 1000000,
-    stamina: Infinity
-}
-// What about function
-const createEnemy = (nameIs, healthIs, powerIs, staminaIs) => {
-    const newEnemy = {
-        name: nameIs,
-        health: healthIs,
-        power: powerIs,
-        stamina: staminaIs
-    }
-    return newEnemy
-}
+// create an object
 
-const createPlayer = (nameIs, healthIs, powerIs, staminaIs) => {
-    const newPlayer = {
-        name: nameIs,
-        health: healthIs,
-        power: powerIs,
-        stamina: staminaIs
-    }
-    return newPlayer
-}
+// const mazda = new Car('Mazda', 12345678);
+// console.log(mazda)
 
+// class Factory {
+//     constructor (company) {
+//         this.company = company;
+//         this.cars.push(newCar)
+//     }
+// }
 
-// creating a class
+// generateCar () {
+//     const newCar = new Car(this.company, this.cars.length); {
+//     this.cars.push(newCar);
+//   }
+//   findCar (index) {
+//     return this.cars[index];
+//   }
+// }
+// const tesla = new Factory('Tesla');
+// tesla.generateCar();
+// tesla.generateCar();
+// tesla.generateCar();
+// tesla.generateCar();
+// console.log(tesla);
+// console.log(tesla.findCar(0));
 
-class Character {
-    constructor (name, age, eyes, hair, lovesCats = false, lovesDogs) {
-      this.legs = 2;
-      this.arms = 2;
-      this.name = name;
-      this.age = age;
-      this.eyes = eyes;
-      this.hair = hair;
-      this.lovesCats = lovesCats;
-      this.lovesDogs = lovesDogs || false;
+// const porche = new Factory('Porche');
+// porche.generateCar();
+// porche.generateCar();
+// console.log(porche);
+// console.log(porche.findCar(0));
+
+// create static property for class
+
+class Person {
+    static eyeColors () {
+      return ['blue', 'green', 'brown'];
     }
-    greet (otherCharacter) {
-      console.log('hi ' + otherCharacter + '!');
-    }
-    smite () {
-      console.log('I smite thee you vile person');
-    }
+    // rest of class definition here...
   }
-  const you = new Character('Cathy the Miraculous', 29, 'brown', 'locs of dark brown', true, true);
-  const me = new Character('Arthur the Wavy', 32, 'brown', 'his waves be spinnin keep of the g for greatness');
-  console.log(me);
+  // more code...
+  const superman = new SuperHero('Clark Kent', 30, Person.eyeColors()[0], 'black');
