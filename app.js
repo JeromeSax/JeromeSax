@@ -128,16 +128,16 @@
 
 // factory functions
 
-class Car {
-    constructor(make, vin) {
-        this.make = make;
-        this.vin = vin;
-    }
-    // methods
-    drive() {
-        console.log('vroom vroom')
-    }
-}
+// class Car {
+//     constructor(make, vin) {
+//         this.make = make;
+//         this.vin = vin;
+//     }
+//     // methods
+//     drive() {
+//         console.log('vroom vroom')
+//     }
+// }
 
 // create an object
 
